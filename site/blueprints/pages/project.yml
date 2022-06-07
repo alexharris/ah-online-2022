@@ -1,0 +1,27 @@
+title: Project
+
+columns:
+  main:
+    width: 2/3
+    sections:
+      fields:
+        type: fields
+        fields:
+          text:
+            type: textarea
+            size: huge
+          tech:
+            label: Technology
+            type: text
+          year:
+            label: Year
+            type: text            
+  sidebar:
+    width: 1/3
+    sections:
+      pages:
+        type: pages
+        template: default
+      files:
+        type: files
+

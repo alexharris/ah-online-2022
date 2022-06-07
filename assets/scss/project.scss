@@ -1,0 +1,45 @@
+@use 'variables';
+
+
+.project-content {
+    .project-content-top {
+        display: flex;
+        flex-direction: row;
+        align-items: top;
+        border-top: 1px solid variables.$blue;
+        padding: variables.$padding;
+        .project-image {
+            width: 50%;
+            flex-grow: 1;
+        }
+        .project-text {
+            width: 50%;
+            padding-right: variables.$padding;
+            p {
+                padding-top: 1em;
+                font-size: 18px;
+                line-height: 1.6em;
+            }            
+        }
+
+    }
+    .project-images {
+        border-top: 1px solid variables.$blue;
+        padding: variables.$padding; 
+        margin: variables.$padding 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;  
+        justify-content: space-evenly;
+        .slider {
+            width: 90%;
+            figure {
+                width: 100%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}

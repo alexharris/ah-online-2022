@@ -1,0 +1,6 @@
+title: Projects
+
+sections:
+  projects:
+    type: pages
+    layout: cards

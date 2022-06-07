@@ -1,0 +1,26 @@
+@use 'variables';
+
+.project-card {
+    border-top: 1px solid variables.$blue;
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    figure {
+        margin: 0;
+        width: 50%;
+        min-width: 50%;
+        img {
+            width: 100%;
+        }
+        a {
+            display: block;
+            line-height: 0;
+        }
+    }
+    .project-text {
+        padding: 0 variables.$padding;
+        & > div {
+            padding-top: 16px;
+        }
+    }
+}

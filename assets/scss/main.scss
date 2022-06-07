@@ -1,0 +1,53 @@
+// Structural
+@use 'variables';
+@use 'underscore.scss';
+@use 'structure.scss';
+@use 'typography.scss';
+@use 'project-card.scss';
+@use 'project.scss';
+@use 'slick.scss';
+
+html {
+    color: variables.$blue;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+    color: variables.$blue;
+    &:hover {
+        text-decoration: underline;
+    }    
+    &:visited {
+        color: variables.$blue;
+    }
+    &:active {
+        color: variables.$blue;
+    }        
+}
+
+header {
+    @include typography.plex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: variables.$padding;
+}
+
+.main-wrapper {
+    .intro {
+        padding: variables.$padding;
+        border-top: 1px solid variables.$blue;
+        div {
+            max-width: 700px;
+            line-height: 1.6em;
+        }
+    }
+}
+
+.svg-icon {
+    fill: none;
+    stroke: variables.$blue;
+    cursor: pointer;
+}
