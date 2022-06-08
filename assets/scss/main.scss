@@ -13,7 +13,7 @@ html {
 
 a {
     text-decoration: none;
-    font-weight: 600;
+    // font-weight: 600;
     color: variables.$blue;
     &:hover {
         text-decoration: underline;
@@ -36,6 +36,10 @@ header {
 }
 
 .main-wrapper {
+    .main-content {
+        padding: variables.$padding;
+        border-top: 1px solid variables.$blue;
+    }
     .intro {
         padding: variables.$padding;
         border-top: 1px solid variables.$blue;
@@ -44,10 +48,17 @@ header {
             line-height: 1.6em;
         }
     }
+    .project-list {
+    
+    }
 }
 
 .svg-icon {
     fill: none;
     stroke: variables.$blue;
     cursor: pointer;
+    &:hover {
+        border: 1px solid variables.$blue;
+        border-radius: 100%;
+    }
 }

@@ -1,0 +1,5 @@
+Title: Contact
+
+----
+
+Text: [{"content":{"text":"<p>Interested in hiring me for a project, or just want to talk about the internet? You can reach me via:<\/p><p><\/p>"},"id":"57626013-ce62-471e-ae88-bd17990de911","isHidden":false,"type":"text"},{"content":{"text":"<p><a href=\"mailto:hello@alexharris.online\" rel=\"noopener noreferrer\">hello@alexharris.online<\/a><\/p>"},"id":"9b4b301e-cecd-4922-874d-34827e504a3e","isHidden":false,"type":"text"},{"content":{"text":"<p>Or find me online at:<\/p>"},"id":"03b9a367-1405-4737-b5f9-eeeae68b5182","isHidden":false,"type":"text"},{"content":{"text":"<ul><li><a href=\"https:\/\/github.com\/alexharris\" rel=\"noopener noreferrer\">Github<\/a><\/li><li><a href=\"https:\/\/www.linkedin.com\/in\/alex-harris-a7425b90\/\" rel=\"noopener noreferrer\">Linked In<\/a><\/li><\/ul>"},"id":"7fc3f681-3894-4752-bd34-f4b55529a346","isHidden":false,"type":"list"}]

@@ -15,7 +15,10 @@ columns:
             type: text
           year:
             label: Year
-            type: text            
+            type: text    
+          link:
+            label: Site URL
+            type: text        
   sidebar:
     width: 1/3
     sections:

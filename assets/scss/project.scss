@@ -5,34 +5,48 @@
     .project-content-top {
         display: flex;
         flex-direction: row;
-        align-items: top;
+        gap: 2em;
         border-top: 1px solid variables.$blue;
         padding: variables.$padding;
         .project-image {
             width: 50%;
-            flex-grow: 1;
+            max-width: 100%;
+            @include variables.below(variables.$screen-s) {
+                width: 100%;
+                img {
+                    width: 100%;
+                }
+            }            
         }
         .project-text {
             width: 50%;
-            padding-right: variables.$padding;
             p {
                 padding-top: 1em;
                 font-size: 18px;
                 line-height: 1.6em;
-            }            
+            }  
+            @include variables.below(variables.$screen-s) {
+                width: 100%;
+            }                       
         }
-
+        @include variables.below(variables.$screen-s) {
+            flex-direction: column-reverse;
+            gap: variables.$padding;
+        }
     }
     .project-images {
-        border-top: 1px solid variables.$blue;
+        // border-top: 1px solid variables.$blue;
         padding: variables.$padding; 
-        margin: variables.$padding 0;
+        // margin: variables.$padding 0;
         display: flex;
         flex-direction: row;
         align-items: center;  
         justify-content: space-evenly;
+        background-color: variables.$lightgray;
         .slider {
             width: 90%;
+            display: flex;
+            align-items: center;
             figure {
                 width: 100%;
                 img {
@@ -40,6 +54,77 @@
                 }
             }
         }
+        .mobile-slider-nav {
+            display: none;
+            @include variables.below(variables.$screen-s) {
+                display: block;
+            }
+        }
+        @include variables.below(variables.$screen-s) {
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            .slider {
+                order: 1;
+                width: 100%;
+
+            }
+            svg {
+                // display: none;
+            }            
+        }        
+    }
+    .project-pagination {
+        // border-top: 1px solid variables.$blue;
+        padding: variables.$padding;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        font-weight: 200;
+        .paginate-link {
+            display: flex;
+            flex-direction: row;
+            font-size: 1.4em;
+            &.paginate-next {
+                margin-left: auto;
+            }
+            &.paginate-prev {            
+                margin-right: auto;        
+                text-align: right;                
+            }
+        }
+        a {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;  
+           svg {
+            margin: 0 16px; 
+           }         
+        }
+        @include variables.below(variables.$screen-s) {
+            flex-direction: column;
+            align-items: flex-start;
+            .paginate-link {
+                font-size: 1em;
+                &.paginate-next {
+                    margin-left: 0;
+                }
+                &.paginate-prev {            
+                    margin-right: 0;        
+                    text-align: left;                
+                }                
+            }
+            a {
+                svg {
+                    display: none;
+                }
+            }
+        }        
     }
 
 }

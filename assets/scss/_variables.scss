@@ -1,2 +1,28 @@
 $padding: 32px;
 $blue: #223B7B;
+$lightgray: #f5f5f5;
+$screen-md: 1200px;
+$screen-s: 1000px;
+$screen-xs: 750px;
+$screen-xxs: 600px;
+
+
+// Media Queries
+
+@mixin below($breakpoint) {
+    @media all and (max-width: ($breakpoint - 1)) {
+        @content;
+    }
+}
+  
+@mixin respond-between($min, $max) {
+    @media all and (min-width:$min) and (max-width:$max - 1) {
+        @content;
+    }
+}
+  
+@mixin above($min-width) {
+    @media all and (min-width: ($min-width)) {
+        @content;
+    }
+}

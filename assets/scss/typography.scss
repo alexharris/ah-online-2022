@@ -24,8 +24,18 @@
     font-family: 'Plex', sans-serif;
 }
 
+.plex {
+    @include plex;
+}
+
+.small-caps {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
 html {
-    font-family:'Times New Roman', Times, serif
+    font-family:'Times New Roman', Times, serif;
+    font-size: 18px;
 }
 
 h1, h2, h3, h4, h5 {
@@ -38,5 +48,9 @@ h1, h2, h3, h4, h5 {
     font-family: 'Times New Roman', sans-serif;
     font-size: 32px;
 
+}
+
+.main-content {
+    line-height: 1.8em;
 }
 

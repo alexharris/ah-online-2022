@@ -24,7 +24,21 @@
   Alex Harris <br />
   Web Development
   </a>
-  <div class="menu">
-    <a href="#">Contact</a>
-  </div>
+  <?php
+
+// main menu items
+$items = $pages->listed();
+
+// only show the menu if items are available
+if($items->isNotEmpty()):
+
+?>
+<nav class="menu">
+
+    <?php foreach($items as $item): ?>
+<a<?php e($item->isOpen(), ' class="active"') ?> href="<?= $item->url() ?>"><?= $item->title()->html() ?></a>
+    <?php endforeach ?>
+
+</nav>
+<?php endif ?>
 </header>

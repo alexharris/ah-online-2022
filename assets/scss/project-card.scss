@@ -23,4 +23,15 @@
             padding-top: 16px;
         }
     }
+    @include variables.below(variables.$screen-xs) {
+        flex-direction: column;
+        gap: variables.$padding;
+        padding-bottom: variables.$padding;
+        figure {
+            width: 100%;
+        }
+        .project-text  {
+            padding: 0;
+        }
+    }    
 }
