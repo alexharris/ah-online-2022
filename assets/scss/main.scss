@@ -7,22 +7,23 @@
 @use 'project.scss';
 @use 'slick.scss';
 
-html {
-    color: variables.$blue;
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
 }
 
 a {
     text-decoration: none;
     // font-weight: 600;
-    color: variables.$blue;
+    color: var(--text-color);
     &:hover {
         text-decoration: underline;
     }    
     &:visited {
-        color: variables.$blue;
+        color: var(--text-color);
     }
     &:active {
-        color: variables.$blue;
+        color: var(--text-color);
     }        
 }
 
@@ -33,18 +34,39 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: variables.$padding;
+    border-bottom: 1px solid var(--border-color);
+    .menu {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;  
+        gap: 1em;
+        a {
+            font-weight: 600;
+        }
+        .svg-icon {
+            border: 0;
+            fill: var(--text-color);
+            &:hover {
+                fill: #ff0;
+            }
+        }
+    }
 }
 
 .main-wrapper {
+    a {
+        text-decoration: underline;
+    }
     .main-content {
         padding: variables.$padding;
-        border-top: 1px solid variables.$blue;
+        
+        max-width: 1000px;
+        margin: auto;
     }
     .intro {
-        padding: variables.$padding;
-        border-top: 1px solid variables.$blue;
+        padding: ( variables.$padding * 2) variables.$padding;
         div {
-            max-width: 700px;
+            max-width: 800px;
             line-height: 1.6em;
         }
     }
@@ -55,10 +77,10 @@ header {
 
 .svg-icon {
     fill: none;
-    stroke: variables.$blue;
+    stroke: var(--text-color);
     cursor: pointer;
     &:hover {
-        border: 1px solid variables.$blue;
+        border: 1px solid var(--text-color);
         border-radius: 100%;
     }
 }

@@ -15,7 +15,7 @@
 
         </div>
         <div class="project-image">
-          <?= $page->image()->crop(600,400) ?>  
+          <?= $page->image()->crop(800,600) ?>  
         </div>
       </div>  
       <div class="project-images">

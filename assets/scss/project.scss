@@ -6,16 +6,15 @@
         display: flex;
         flex-direction: row;
         gap: 2em;
-        border-top: 1px solid variables.$blue;
-        padding: variables.$padding;
+        padding: (variables.$padding * 3) variables.$padding;
         .project-image {
             width: 50%;
             max-width: 100%;
+            img {
+                width: 100%;
+            }
             @include variables.below(variables.$screen-s) {
                 width: 100%;
-                img {
-                    width: 100%;
-                }
             }            
         }
         .project-text {
@@ -32,17 +31,17 @@
         @include variables.below(variables.$screen-s) {
             flex-direction: column-reverse;
             gap: variables.$padding;
+            padding: variables.$padding;
         }
     }
     .project-images {
-        // border-top: 1px solid variables.$blue;
-        padding: variables.$padding; 
+        padding: (variables.$padding * 3) variables.$padding;
         // margin: variables.$padding 0;
         display: flex;
         flex-direction: row;
         align-items: center;  
         justify-content: space-evenly;
-        background-color: variables.$lightgray;
+        background-color: var(--secondary-bg-color);
         .slider {
             width: 90%;
             display: flex;
@@ -56,10 +55,20 @@
         }
         .mobile-slider-nav {
             display: none;
+            margin-bottom: 1em;
+            svg {
+                margin: 0 1em 1em;
+            }
             @include variables.below(variables.$screen-s) {
                 display: block;
             }
         }
+        & > .svg-icon {
+            @include variables.below(variables.$screen-s) {
+                border: 1px solid red;
+                display: none;
+            }
+        }         
         @include variables.below(variables.$screen-s) {
             flex-direction: column-reverse;
             flex-wrap: wrap;
@@ -70,13 +79,10 @@
                 width: 100%;
 
             }
-            svg {
-                // display: none;
-            }            
+           
         }        
     }
     .project-pagination {
-        // border-top: 1px solid variables.$blue;
         padding: variables.$padding;
         display: flex;
         flex-direction: row;

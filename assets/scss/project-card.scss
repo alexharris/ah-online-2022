@@ -1,7 +1,7 @@
 @use 'variables';
 
 .project-card {
-    border-top: 1px solid variables.$blue;
+    border-top: 1px solid var( --border-color);
     display: flex;
     flex-direction: row;
     padding: 1em;
