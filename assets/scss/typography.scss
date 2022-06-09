@@ -1,3 +1,5 @@
+@use 'variables';
+
 @font-face {
     font-family: 'Plex';
     src: url('fonts/IBMPlexSans-Light.eot');
@@ -34,7 +36,7 @@
 }
 
 html {
-    font-family:'Times New Roman', Times, serif;
+    font-family:'Georgia', Times, serif;
     font-size: 18px;
 }
 
@@ -47,10 +49,16 @@ h1, h2, h3, h4, h5 {
 .intro {
     font-family: 'Times New Roman', sans-serif;
     font-size: 32px;
+    @include variables.below(variables.$screen-s) {
+        font-size: 24px;
+    }    
 
 }
 
 .main-content {
     line-height: 1.8em;
+    font-size: 20px;
 }
+
+
 

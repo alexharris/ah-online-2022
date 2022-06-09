@@ -18,7 +18,11 @@ columns:
             type: text    
           link:
             label: Site URL
-            type: text        
+            type: text   
+          with:    
+            label: With
+            type: list
+
   sidebar:
     width: 1/3
     sections:

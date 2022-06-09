@@ -17,10 +17,21 @@
             line-height: 0;
         }
     }
+    .svg-icon {
+        padding: 2px;
+        margin-top: 4px;
+    }
     .project-text {
-        padding: 0 variables.$padding;
-        & > div {
+        padding: 0 0 0 variables.$padding;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .project-text-details {
             padding-top: 16px;
+        }
+        a {
+            // margin-top: auto;
         }
     }
     @include variables.below(variables.$screen-xs) {

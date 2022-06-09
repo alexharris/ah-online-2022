@@ -28,6 +28,16 @@
                 width: 100%;
             }                       
         }
+        .project-details {
+            span.label {
+                font-family: plex;
+                font-weight: 600;
+                display: inline-block;
+                width: 130px;
+                margin: 0 10px 8px 0;
+                border-bottom: 1px solid var(--text-color)
+            }
+        }
         @include variables.below(variables.$screen-s) {
             flex-direction: column-reverse;
             gap: variables.$padding;
@@ -126,6 +136,7 @@
                 }                
             }
             a {
+                justify-content: flex-start;  
                 svg {
                     display: none;
                 }
@@ -133,4 +144,23 @@
         }        
     }
 
+}
+
+.line-list {
+    ul {
+        list-style-type: none;
+        display: inline;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline;
+            &:after {
+                content: ',';
+                padding-right: 4px;
+            }
+            &:last-of-type:after {
+                content: ''
+            }
+        }
+    }
 }

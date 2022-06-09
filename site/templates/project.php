@@ -8,14 +8,18 @@
           <p >
             <?= $page->text() ?>
           </p>
-          <p class="plex">
-          <a href="<?= $page->link() ?>"><?= $page->link() ?></a><br />  
-          <?= $page->tech() ?><br />
-          <?= $page->year() ?></p>
+          <div class="project-details">
+            <span class="label">URL</span><a href="<?= $page->link() ?>"><?= $page->link() ?></a><br />  
+            <span class="label">Technologies</span><?= $page->tech() ?><br />
+            <span class="label">Date</span><?= $page->year() ?><br/>    
+            <?php if($page->with() != ''): ?>
+              <span class="line-list"><span class="label">With</span><?= $page->with() ?></span>
+            <?php endif ?>
+          </div>
 
         </div>
         <div class="project-image">
-          <?= $page->image()->crop(800,600) ?>  
+          <?= $page->image()->crop(600,600) ?>  
         </div>
       </div>  
       <div class="project-images">

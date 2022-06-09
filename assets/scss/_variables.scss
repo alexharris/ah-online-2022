@@ -8,16 +8,16 @@ body {
 body.dark-theme {
     --text-color: #ffffff;
     --bg-color: #223B7B;
-    --secondary-bg-color: #001B61;
-    --border-color: #001B61;
+    --secondary-bg-color: #294896;
+    --border-color: #041234;
 }
 
 @media (prefers-color-scheme: dark) {
     body {
         --text-color: #ffffff;
         --bg-color: #223B7B;
-        --secondary-bg-color: #001B61;
-        --border-color: #001B61;
+        --secondary-bg-color: #294896;
+        --border-color: #041234;
     }
     body.light-theme {
         --text-color: #223B7B;

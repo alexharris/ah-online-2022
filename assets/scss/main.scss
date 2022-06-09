@@ -35,14 +35,13 @@ header {
     align-items: center;
     padding: variables.$padding;
     border-bottom: 1px solid var(--border-color);
+    font-weight: 600;
     .menu {
         display: flex;
         justify-content: center;
         flex-direction: row;  
         gap: 1em;
-        a {
-            font-weight: 600;
-        }
+
         .svg-icon {
             border: 0;
             fill: var(--text-color);
@@ -56,6 +55,9 @@ header {
 .main-wrapper {
     a {
         text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
     }
     .main-content {
         padding: variables.$padding;
@@ -67,11 +69,11 @@ header {
         padding: ( variables.$padding * 2) variables.$padding;
         div {
             max-width: 800px;
-            line-height: 1.6em;
+            line-height: 1.8em;
         }
-    }
-    .project-list {
-    
+        @include variables.below(variables.$screen-s) {
+            padding: variables.$padding;
+        }
     }
 }
 
