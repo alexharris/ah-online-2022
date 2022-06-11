@@ -1,0 +1,21 @@
+Title: Dither it!
+
+----
+
+Text: Dither it! is a web application that reduces the number of colors an image uses, using various algorithms, providing a particular "lo-fi" aesthetic and often a reduced file size.
+
+----
+
+Tech: Vue.js
+
+----
+
+Year: 2019
+
+----
+
+Link: https://ditherit.com/
+
+----
+
+With: 

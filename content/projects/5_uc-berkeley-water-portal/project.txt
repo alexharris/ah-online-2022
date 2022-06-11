@@ -1,0 +1,17 @@
+Title: UC Berkeley Water Portal
+
+----
+
+Text: The Berkeley Water Center at UC Berkeley hired me to design and build a portal that would allow students to find courses, student groups, grants, and other resources throughout all of the UC Berkeley community that are focused on water. Each semester, students working with the BWC gather system-wide data that is then imported into the Wordpress via a CSV import. The results are easily searched and filtered on the frontend, allowing for both easy browsing or focused discovery of opportunities.
+
+----
+
+Tech: Wordpress
+
+----
+
+Year: 2019
+
+----
+
+Link: https://waterportal.berkeley.edu/

@@ -35,7 +35,10 @@
                 display: inline-block;
                 width: 130px;
                 margin: 0 10px 8px 0;
-                border-bottom: 1px solid var(--text-color)
+                border-bottom: 1px solid var(--text-color);
+                @include variables.below(variables.$screen-s) {
+                    width: 60px;
+                }
             }
         }
         @include variables.below(variables.$screen-s) {

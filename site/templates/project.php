@@ -10,7 +10,7 @@
           </p>
           <div class="project-details">
             <span class="label">URL</span><a href="<?= $page->link() ?>"><?= $page->link() ?></a><br />  
-            <span class="label">Technologies</span><?= $page->tech() ?><br />
+            <span class="label">Using</span><?= $page->tech() ?><br />
             <span class="label">Date</span><?= $page->year() ?><br/>    
             <?php if($page->with() != ''): ?>
               <span class="line-list"><span class="label">With</span><?= $page->with() ?></span>
@@ -19,7 +19,13 @@
 
         </div>
         <div class="project-image">
-          <?= $page->image()->crop(600,600) ?>  
+          <img
+                alt="<?= $page->image()->alt() ?>"
+                src="<?= $page->image()->resize(400)->url() ?>"
+                srcset="<?= $page->image()->srcset([300, 600, 900, 1200, 1800]) ?>"
+                width="<?= $page->image()->resize(1800)->width() ?>"
+                height="<?= $page->image()->resize(1800)->height() ?>"
+            >     
         </div>
       </div>  
       <div class="project-images">
@@ -27,7 +33,13 @@
         <div class="slider">
           <?php foreach($page->images()->offset(1) as $image): ?>
             <figure>
-              <?= $image ?>
+            <img
+                alt="<?= $image->alt() ?>"
+                src="<?= $image->resize(400)->url() ?>"
+                srcset="<?= $image->srcset([300, 600, 900, 1200, 1800]) ?>"
+                width="<?= $image->resize(1800)->width() ?>"
+                height="<?= $image->resize(1800)->height() ?>"
+            >   
             </figure>
           <?php endforeach ?>
         </div>

@@ -1,8 +1,13 @@
 <div class="project-card">
     <figure>
-        <a href="<?= $project->url() ?>">
-            <?= $project->image()->crop(600, 500) ?>
-        </a>
+        <a href="<?= $project->url() ?>" class="img-wrapper">
+    <img
+        alt="<?= $project->image()->alt() ?>"
+        src="<?= $project->image()->resize(400)->url() ?>"
+        srcset="<?= $project->image()->srcset([300, 600, 900, 1200, 1800]) ?>"
+        width="<?= $project->image()->resize(1800)->width() ?>"
+        height="<?= $project->image()->resize(1800)->height() ?>"
+    >        </a>
     </figure>
     <div class="project-text">
         
