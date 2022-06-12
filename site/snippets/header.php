@@ -16,7 +16,7 @@
     <title><?= $title ?> | <?= $site->title() ?></title>
   <?php endif; ?>
 
-  <?= css(['assets/css/main.css', '@auto']);?>
+  <?= css(['/assets/css/main.css', '@auto']);?>
 </head>
 <body class="<?php if (isset($headerClass)) { echo $headerClass; } ?>">
 <header>
