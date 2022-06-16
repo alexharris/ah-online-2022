@@ -12,9 +12,6 @@ return [
     'panel' =>[
         'install' => true
     ],
-    'auth' => [
-        'methods' => 'password-reset'
-    ],
     'cache' => [
         'pages' => [
             'active' => false
